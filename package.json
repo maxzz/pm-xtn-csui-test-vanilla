@@ -1,5 +1,6 @@
 {
     "name": "pm-xtn-csui-test-vanilla",
+    "description": "Test application for pm-xtn-csui",
     "private": true,
     "version": "0.1.0",
     "type": "module",
@@ -15,6 +16,8 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "predeploy": "yarn build",
+        "deploy": "gh-pages -d dist"
     }
 }

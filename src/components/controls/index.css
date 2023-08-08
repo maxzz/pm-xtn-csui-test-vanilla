@@ -1,0 +1,52 @@
+.test-btns-layout {
+    position: absolute;
+    top: .8em;
+    left: .8em;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-row-gap: .2em;
+    font-size: .8em;
+
+    border-radius: 5px;
+    border: 1px solid #7777;
+    box-shadow: 1px 1px 3px 1px #00000020;
+
+    user-select: none;
+    /* background-color: hsla(46, 100%, 50%, 0.3); */
+}
+
+.test-checkbox {
+    padding: .2em;
+    display: flex;
+}
+
+.test-checkbox *:nth-child(2) {
+    padding-left: .4em;
+}
+
+.test-button {
+    padding: .4em;
+    min-width: 4em;
+}
+
+/* 2. Countdown timer */
+#destroyTimer {
+    min-width: 3em;
+    font-size: .8em;
+    text-align: center;
+    margin-left: .4em;
+    align-self: center;
+
+    background-color: white;
+    color: #3c01ff;
+    transition: background-color 1s;
+}
+
+#destroyTimer.shown {
+    background-color: hsl(54, 100%, 63%);
+}
+
+#destroyTimer.enough {
+    background-color: hsl(81, 100%, 77%);
+}

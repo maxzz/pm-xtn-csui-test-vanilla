@@ -1,0 +1,41 @@
+/* 3. Test logo */
+.test-logo-wrap {
+    display: none;
+}
+
+.test-logo-single {
+    margin: 1rem 0.5rem;
+    display: flex;
+    column-gap: 1rem;
+}
+
+.state-icons-wrap {
+    min-width: calc(122px * 2 + 6px);
+}
+
+.state-icons-wrap dp-ico {
+    border: 1px dotted hsla(0, 0%, 50%, 0.637);
+}
+
+.state-icons-btns {
+    display: grid;
+    row-gap: 0.25rem;
+}
+
+.state-icons-btns button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(174, 174, 174);
+    background-color: rgb(221, 221, 221);
+    box-shadow: 1px 0px 1px 1px #0001;
+    transition: transform;
+    cursor: pointer;
+}
+
+.state-icons-btns button:hover {
+    background-color: rgb(239, 239, 239);
+}
+
+.state-icons-btns button:active {
+    transform: scale(.97);
+}

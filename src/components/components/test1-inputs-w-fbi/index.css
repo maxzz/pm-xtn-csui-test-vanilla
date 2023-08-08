@@ -1,0 +1,25 @@
+.test-fbi-wrap {
+    display: none;
+    background-color: hsla(46, 100%, 50%, 0.541);
+}
+
+.test-fbi-input-group {
+}
+
+.test-input {
+    max-width: 7em;
+    margin: .5em 0;
+    padding: .4em;
+    font-size: 1.4em;
+    /* height: 2em; */
+}
+
+.test-place {
+    background-color: hsla(46, 100%, 50%, 0.185);
+    display: inline;
+    outline: 1px dotted #c7b372;
+}
+.test-big-place {
+    height: 6em;
+    background-color: hsla(46, 100%, 50%, 0.541);
+}

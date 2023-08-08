@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+
+    /* background-color: hsla(46, 100%, 50%, 0.541); */
+    background-color: #efefef;
+    color: #3a1e87;
+    accent-color: red;
+}
+
+.test-title {
+    padding: 1rem 0.5rem 0.5rem;
+
+    font-size: .9rem;
+    /* font-weight: 700; */
+    font-stretch: condensed;
+
+    color: rgb(120, 120, 120);
+    /* color: rgb(255, 83, 20); */
+    /* color: coral; */
+    /* background-color: #002e52; */
+    background-color: #d9d9d9;
+}

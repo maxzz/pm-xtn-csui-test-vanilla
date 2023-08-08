@@ -4,13 +4,16 @@
     left: .8em;
     padding: 0.5rem;
 
-    display: grid;
-    grid-row-gap: .2em;
     font-size: .8em;
+
+    background-color: #efefef;
 
     border-radius: 5px;
     border: 1px solid #7777;
     box-shadow: 1px 1px 3px 1px #00000020;
+
+    display: grid;
+    grid-row-gap: .2em;
 
     user-select: none;
     /* background-color: hsla(46, 100%, 50%, 0.3); */

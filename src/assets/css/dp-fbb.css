@@ -1,0 +1,228 @@
+/************************* COMMON STYLES FOR ALL ***************************/
+/*
+    1.
+    Double or triple classes are used to get score 20/30 for selector specifity.
+    Very specific selectors to fight with: usps.com: '#nav-tool-login .unreg ul' and '#nav-tool-login ul'.
+
+    2. TODO: We should not use # selectors since we may have multiple icons, but ID should be unique.
+    This can be solved only with shadow DOM
+
+    3. TODO:
+    :root {
+      --someVar: #000000;
+    }
+
+    4. TODO:
+    z-index: 2147483647; -1 to avoid conflict with FBB. There is a problem with https://www.ipower.com/secure/login.bml#webmail (they reset it to 1)
+*/
+.ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple::before {
+  content: '';
+  position: absolute;
+  background-color: #eee;
+  padding: 50%;
+  border-radius: 50%;
+  left: calc(100% * var(--ripple-x));
+  top: calc(100% * var(--ripple-y));
+  transform: translate(-50%, -50%) scale(3);
+  opacity: 0;
+  transition: transform 1s, opacity 1s;
+}
+
+.ripple:active::before {
+  transition: 0s;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+:host {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2147483646;
+  width: 322px;
+  display: block;
+}
+
+html, * {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 322px;
+  position: absolute;
+  top: .6em;
+  left: -.6em;
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  color: black;
+  z-index: 2147483646;
+}
+
+.main {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  border: 1px solid #969fab;
+  border-radius: 4px;
+  box-shadow: 0px 3px 6px #00000040;
+  background-color: white;
+  -moz-user-select: none;
+       user-select: none;
+  transition: opacity .5s;
+}
+
+.hide-main {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  border-radius: 4px 4px 0 0;
+  padding-bottom: .4em;
+  background: linear-gradient(308.35deg, #bed8ff1a 35.82%, #fff2c61a 89.63%);
+}
+
+.header dp-ico {
+  margin: .4em;
+  align-self: center;
+}
+
+.header .hint {
+  padding: .4em 3em .8em 0;
+  font-size: .9em;
+  color: #353535;
+  align-self: end;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header .hint .hint-site {
+  color: #0d693e;
+}
+
+section {
+  padding: 0 1.2em;
+}
+
+section .title {
+  font-size: 1em;
+  padding: 1em 0;
+}
+
+section .rows {
+  display: grid;
+  grid-template-columns: minmax(5em, min-content) auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 1.1em;
+  align-items: center;
+  font-size: .9em;
+}
+
+section .rows .input {
+  padding: 0.6em;
+  border-radius: 3px;
+  border: 1px solid #b1b1b1;
+  background: #ffffff80;
+  min-width: 5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+section .rows .input[type=password] {
+  background: #f7f7f7;
+  color: gray;
+}
+
+section .controls {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: end;
+  grid-gap: 0.6em;
+  margin: 1.2em 0;
+}
+
+.btn {
+  position: relative;
+  cursor: pointer;
+  padding: .7em 1em;
+  min-width: 5.7em;
+  text-align: center;
+  font-weight: bold;
+  font-size: .9em;
+  color: #1a73e8;
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px #a2c3fa;
+}
+
+.btn:hover {
+  background-color: #f2f2f2;
+}
+
+.btn[aria-label]:hover::after {
+  content: attr(aria-label);
+  position: absolute;
+  padding: .6em;
+  right: 0;
+  top: calc(100% + 1em);
+  min-width: 20em;
+  font-weight: normal;
+  text-align: left;
+  border: 1px solid gray;
+  border-radius: 3px;
+  color: black;
+  background-color: white;
+  box-shadow: 0px 3px 6px #00000040;
+  z-index: 1;
+}
+
+.btn-primary {
+  color: white;
+  background-color: #4285f4;
+  border-color: #1266f1;
+}
+
+.btn-primary:focus {
+  background-color: #5a95f5;
+}
+
+.btn-primary:hover {
+  background-color: #1266f1;
+}
+
+#close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .2em .4em;
+  cursor: pointer;
+  outline: none;
+}
+
+#close > * {
+  pointer-events: none;
+}
+
+#close:hover, #close:focus {
+  background-color: red;
+  border-radius: 0 4px 0 0;
+}
+
+#close:hover svg path, #close:focus svg path {
+  fill: white;
+  stroke: #ffd3d3;
+}
+/*# sourceMappingURL=dp-fbb.css.map */

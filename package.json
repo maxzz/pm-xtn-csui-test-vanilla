@@ -1,8 +1,14 @@
 {
     "name": "pm-xtn-csui-test-vanilla",
-    "description": "Test application for pm-xtn-csui",
-    "private": true,
     "version": "0.1.0",
+    "private": true,
+    "description": "Test application for pm-xtn-csui",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maxzz/pm-xtn-csui-test-vanilla.git"
+    },
+    "homepage": "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
     "type": "module",
     "dependencies": {
         "pm-xtn-csui": "^1.0.4",

@@ -1,6 +1,6 @@
 {
     "name": "pm-xtn-csui-test-vanilla",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "private": true,
     "description": "Test application for pm-xtn-csui",
     "license": "MIT",
@@ -17,14 +17,13 @@
     },
     "devDependencies": {
         "typescript": "^5.0.2",
-        "vite": "^4.4.5"
+        "vite": "^5.3.5"
     },
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
         "predeploy": "pnpm build",
-        "to-npm": "pnpm publish --no-git-checks",
         "deploy": "gh-pages -d dist"
     }
 }

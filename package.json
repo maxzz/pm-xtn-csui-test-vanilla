@@ -11,9 +11,9 @@
     "homepage": "https://github.com/maxzz/pm-xtn-csui-test-vanilla",
     "type": "module",
     "dependencies": {
-        "pm-xtn-csui": "^1.0.4",
-        "pm-xtn-csui-res": "^1.0.5",
-        "pm-xtn-dom": "^1.0.14"
+        "pm-xtn-csui": "latest",
+        "pm-xtn-csui-res": "latest",
+        "pm-xtn-dom": "latest"
     },
     "devDependencies": {
         "typescript": "^5.0.2",
@@ -23,7 +23,8 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "predeploy": "yarn build",
+        "predeploy": "pnpm build",
+        "to-npm": "pnpm publish --no-git-checks",
         "deploy": "gh-pages -d dist"
     }
 }
